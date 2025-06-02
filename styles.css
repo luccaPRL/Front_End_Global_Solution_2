@@ -1,0 +1,159 @@
+:root {
+  --primary-color: #1b4de4;
+  --secondary-color: #1636a0;
+  --accent-color: #fbbc04;
+  --text-color: #1a1a1a;
+  --background-color: #f0f2f5;
+  --card-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  --transition: all 0.3s ease-in-out;
+  --radius: 10px;
+  --max-width: 1080px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+header, footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+header .subtitulo {
+  font-size: 1.1rem;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+section:hover {
+  transform: translateY(-2px);
+}
+
+section h2, section h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+ul {
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+ul li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.03);
+}
+
+.voltar {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.voltar:hover {
+  background-color: #0d2e7c;
+}
+
+#resultado {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+#listaLocais li, #listaRotas li {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+footer {
+  margin-top: auto;
+  font-size: 0.9rem;
+  background-color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  main {
+    padding: 0 1rem;
+  }
+
+  button, .voltar {
+    width: 100%;
+    text-align: center;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+}
